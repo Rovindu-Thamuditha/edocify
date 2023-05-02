@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="favicon5.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/svg-with-js.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/v4-shims.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap">
+
+
+
+    <style>
+        body{
+            background-color: #000;
+        }
+
+        
+		html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Poppins;
+}
+h1{
+    font-size: 50px;
+    font-family:Audiowide;
+}
+p{
+    font-size: 24px;
+    line-height: 50px;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+.nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+.logo {
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+}
+img{
+    width: 20%;
+}
+a{
+    margin: 15px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover{
+    color: #000;
+}
+
+
+        /* media query for menu */
+        @media only screen and (max-width:800px){
+            nav ul{
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #000;
+                opacity: 0.99;
+                width: 100%;
+                overflow: hidden;
+                transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                display: block;
+                margin-right: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 25px;
+                color: #fff !important;
+                text-decoration: none !important;
+            }
+
+            nav ul li a{
+                color: #fff !important;
+                text-decoration: none !important;
+            } 
+
+            .fa-bars{
+                display: block;
+                cursor: pointer;
+            }
+
+            .fa-times{
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                top: 20px;
+                right: 49px;
+                font-size: 40px;
+                text-decoration: none !important;
+                color: #fff;
+            }
+        }
+
+
+
+.banner-area{
+    position: relative;
+    background-image: url(https://i.postimg.cc/GtRM7mdX/1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-area, .port-area, .service-area, .contact-area{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 700px;
+}
+.text-part{
+    width: 65%;
+    height: 80%;
+}        
+.about-area{
+    background-color: #fefefe;
+}
+.port-area{
+    background-color: #262626;
+    color: #fff;
+}
+.service-area{
+    background-color: #fefefe;
+}
+.contact-area{
+    background-color: #262626;
+    color: #fff;
+}
+
+    </style>
+
+
+
+</head>
+<body><div class="navbar">
+    <a class="logo" href="#"> Saffron</a>
+    <ul class="nav" id="menuItems">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#services">Service</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<i class="fas fa-bars" onclick="menutoggle()"></i>
+<section class="banner-area" id="home">
+</section>
+
+<section class="about-area" id="about">
+    <div class="text-part">
+        <h1>
+About Area</h1>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.</p>
+</div>
+</section>
+
+<section class="port-area" id="portfolio">
+    <div class="text-part">
+        <h1>
+Portfolio Area</h1>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.</p>
+</div>
+</section>
+
+<section class="service-area" id="services">
+    <div class="text-part">
+        <h1>
+Services Area</h1>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.</p>
+</div>
+</section>
+
+<section class="contact-area" id="contact">
+    <div class="text-part">
+        <h1>
+Contact Area</h1>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.</p>
+</div>
+</section>
+
+
+    <!-- js for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(menuItems.style.maxHeight == "0px")
+                {
+                    menuItems.style.maxHeight = "400px";
+                }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>
