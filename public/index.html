@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edocify</title>
+    <link rel="shortcut icon" type="image/png" href="favicon5.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/svg-with-js.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/v4-shims.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap">
+
+	<script async="async" src="https://static.mobilemonkey.com/js/mm_a98adebc-528a-4123-bd5e-9f34e7defe8c-18016421.js"></script>
+	<script>
+		window.mmDataLayer = window.mmDataLayer || [];
+		function mmData(o) { mmDataLayer.push(o); }
+	</script>
+
+
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        /* width on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            width: 19px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: none;
+            border-radius: 0px;
+            background: #000;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 10px;
+			transition: 1s;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+			opacity: 0 !important;
+            cursor: pointer;
+        }
+    </style>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+			background: #000;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+			-webkit-animation: smooth 2s ease-in;
+			-moz-animation: smooth 2s ease-in;
+			-o-animation: smooth 2s ease-in;
+			-ms-animation: smooth 2s ease-in;
+			animation: smooth 2s ease-in;
+        }
+
+		@-webkit-keyframes smooth {
+			0% { opacity: 0;}
+			100% { opacity: 1;}
+		}
+
+		@-moz-keyframes smooth {
+			0% { opacity: 0;}
+			100% { opacity: 1;}
+		}
+
+		@-o-keyframes smooth {
+			0% { opacity: 0;}
+			100% { opacity: 1;}
+		}
+
+		@keyframes smooth {
+			0% { opacity: 0;}
+			100% { opacity: 1;}
+		}
+
+		h1::selection{
+			background: transparent;
+		}
+		h2::selection{
+			background: transparent;
+		}
+		h3::selection{
+			background: transparent;
+		}
+		h4::selection{
+			background: transparent;
+		}
+		h5::selection{
+			background: transparent;
+		}
+		h6::selection{
+			background: transparent;
+		}
+		p::selection{
+			background: transparent;
+		}
+		span::selection{
+			background: transparent;
+		}
+		img::selection{
+			background: transparent;
+		}
+		br::selection{
+			background: transparent;
+		}
+		b::selection{
+			background: transparent;
+		}
+		a::selection{
+			background: transparent;
+		}
+		li::selection{
+			background: transparent;
+		}
+		ul::selection{
+			background: transparent;
+		}
+
+		#myBtn {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			font-size: 18px;
+			border: none;
+			outline: none;
+			background: transparent;
+			color: #fff;
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 100%;
+			transition: 0.5s;
+		}
+
+		#navbar{
+			background: transparent;
+		}
+
+        .navbar{
+            display: flex;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 0px;
+			width: 100%;
+			text-align: right;
+    		justify-content: center;
+			background: transparent !important;
+    		background-color: transparent;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+    		z-index: 1;
+        }
+
+        nav{
+            flex: 1;
+            text-align: right;
+			width: 100%;
+			background: transparent !important;
+        }
+
+        nav ul{
+            display: inline-block;
+            list-style-type: none;
+			padding-top: 10px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a{
+            text-decoration: none !important;
+            color: #fff; 
+        }
+		
+		nav ul li a:hover{
+			opacity: 0.7 !important;
+			transition: 0.5s;
+		}
+        
+        .container{
+            max-width: 1400px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .col-2{
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+
+        .col-2 img{
+            max-width: 100%;
+            padding: 50 px 0;
+        }
+
+        .col-2 h1{
+            font-size: 50px;
+            line-height: 60px;
+            margin-top: 50px;
+        }
+
+        .fa-bars{
+            font-size: 40px;
+            display: none;
+        }
+
+        .fa-times{
+            display: none;
+        }
+
+        /* media query for menu */
+        @media only screen and (max-width:800px){
+            nav ul{
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #000;
+                opacity: 0.99;
+                width: 100%;
+                overflow: hidden;
+                transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                display: block;
+                margin-right: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 25px;
+                color: #fff !important;
+                text-decoration: none !important;
+            }
+
+            nav ul li a{
+                color: #fff !important;
+                text-decoration: none !important;
+            } 
+
+            .fa-bars{
+                display: block;
+                cursor: pointer;
+            }
+
+            .fa-times{
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                top: 20px;
+                right: 49px;
+                font-size: 40px;
+                text-decoration: none !important;
+                color: #fff;
+            }
+        }
+
+		/* Header Section */
+		#header{
+			background-repeat: repeat;
+			background-attachment: fixed;  
+			background-size: auto;
+		}
+
+		@media only screen and (min-width: 801px) {
+			.row{
+				margin: 100px 0;
+			}
+
+			.col-2 h1{
+				margin-top: 400px
+			}
+			.col-2 p{
+				margin-top: 15px;
+			}
+		}
+
+		#header .container{
+			position: relative;
+			text-align: left;
+			color: white;
+		}
+
+		.bottom-left{
+			position: absolute;
+			bottom: 8px;
+			left: 16px;
+		}	
+
+		/* Services Section */
+		.services{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		
+		.col-4{
+			max-width: 300px !important;
+			text-align: center;
+			margin: 0 18.7px;
+		}
+
+		.services img{
+			width: 220px;
+			margin-top: 80px;
+			transition: transform 0.5s;
+		}
+
+		.services img:hover{
+			transform: translateY(-25px);
+		}
+
+		.services h4{
+			padding: 5px;
+			margin-top: 25px;
+			text-transform: uppercase;
+			font-size: 23px;
+			text-align: center !important;
+			transition: transform 0.5s;
+		}
+
+		.services h4:hover{
+			color: #49ace2;
+			transition: 0.7s;
+		}
+		
+		.services h5:hover{
+			color: #49ace2;
+			transition: 0.7s;
+		}
+		
+		.services .text-size2{
+			padding: 5px;
+			margin-top: 20px;
+			text-transform: uppercase;
+			font-size: 23px;
+			text-align: center !important;
+			transition: transform 0.5s;
+		}
+
+		.services .text-size2:hover{
+			color: #49ace2;
+			transition: 0.7s;
+		}
+
+		.services .title-size{
+			padding-bottom: 5px;
+			margin-top: 33px;
+			text-transform: uppercase;
+			font-size: 23px;
+			text-align: center !important;
+			transition: transform 0.5s;
+		}
+
+		.title{
+			text-align: center;
+			position: relative;
+			line-height: 60px;
+			font-size: 45px;
+			font-weight: 900;
+		}
+
+		.title::selection{
+			background: transparent;
+		}
+
+		.title::before{
+			content: '';
+			background-color: #fff;
+			height: 6px;
+			width: 130px;
+			border-radius: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			transform: translateY(63px);
+		}
+
+		.btn-primary{
+			box-shadow: none;
+			padding: 8px 25px;
+			color: #fff;
+			border: 3px solid #fff;
+			border-color: #fff !important;
+			border-radius: 30px;
+			background-color: transparent !important;
+			text-decoration: none !important;
+			align-items: center;
+			transition: 1s;
+		}
+		.btn-primary:hover{
+			opacity: 0.7 !important;
+			animation-iteration-count: infinite;
+		}
+
+		@media only screen and (min-width: 616px) {
+			.services .gmi{
+				width: 289px;
+			}
+
+			.services .gim{
+				width: 312px;
+			}
+		}
+		
+		/* About-Us Section */
+		.container1{
+			margin: 80px 150px;
+		}
+
+		.col-2 img{
+			width: 500px;
+			text-align: center;
+		}
+
+		span{
+			float: left;
+			width: 75px;
+			line-height: 80%;
+		}
+		@media only screen and (max-width:485px){
+			.container1{
+				margin: 55px 75px !important;
+			}
+
+			.title{
+				font-size: 48px;
+			}
+
+			.title::before{
+				display: none;
+			}
+		}
+
+		@media only screen and (max-width:905px){
+			.col-2 img{
+				margin-left: 0px !important;
+			}
+		}
+
+		@media only screen and (min-width:905px){
+			#about-us .col-2 br{
+				display: none;
+			}
+		}
+
+		/* Our-Trust Section */
+		#our-trust .col-4{
+			padding-top: 60px;
+		}
+		#our-trust .col-4 img{
+			width: 200px;
+			cursor: pointer;
+			filter: grayscale(100%);
+			transition: 0.5s;
+		}
+		#our-trust .col-4 img:hover{
+			filter: grayscale(0);
+			transition: 0.5s;
+		}
+
+		@media only screen and (max-width:800px){
+			#our-trust br{
+				display: none;
+			}
+		}
+
+		/* Contact-Us Section */
+		#contact-us{
+			text-align: center !important;
+			color: #fff;
+		}
+
+		form{
+			margin-top: 50px;
+			transition: all 4s ease-in-out;
+			color: #fff;
+		}
+
+		.form-control{
+			width: 600px;
+			background: #000;
+			opacity: 1;
+			color: #fff;
+			border: 3px solid #fff;
+			border-radius: 30px;
+			outline: none !important;
+			font-size: 18px;
+			font-weight: 900;
+			font-size: 1.1rem;
+    		padding: 15px;
+		}
+
+		.form-control input::placeholder{
+			color: #fff;
+			font-weight: 900;
+		}
+		
+		.form-control textarea::placeholder{
+			color: #fff !important;
+			font-weight: 900 !important;
+		}
+
+		.col-2 h2{
+			font-size: 50px;
+		}
+
+		@media only screen and (max-width:1205px){
+			
+			.form-control{
+				width: 400px;
+				background: #000;
+				opacity: 1;
+				color: #fff;
+				border: 3px solid #fff;
+				border-radius: 30px;
+				outline: none !important;
+				font-size: 18px;
+				font-weight: 900;
+				font-size: 1.1rem;
+				padding: 15px;
+			}
+		}
+		@media only screen and (max-width:805px){
+			
+			.form-control{
+				width: 350px;
+				background: #000;
+				opacity: 1;
+				color: #fff;
+				border: 3px solid #fff;
+				border-radius: 30px;
+				outline: none !important;
+				font-size: 18px;
+				font-weight: 900;
+				font-size: 1.1rem;
+				padding: 15px;
+			}
+		}
+		@media only screen and (max-width:705px){
+			
+			.form-control{
+				width: 300px;
+				background: #000;
+				opacity: 1;
+				color: #fff;
+				border: 3px solid #fff;
+				border-radius: 30px;
+				outline: none !important;
+				font-size: 18px;
+				font-weight: 900;
+				font-size: 1.1rem;
+				padding: 15px;
+			}
+		}
+		@media only screen and (max-width:800px){
+			
+			.col-2 h2{
+				display: none;
+			}
+		}
+
+		/* Footer Section */
+		#footer{
+			margin-top: 200px;
+			margin-bottom: 0px !important;
+		}
+
+		.hcolor:hover{
+			color: #49ace2;
+			cursor: pointer;
+			transition: 0.7s;
+		}
+
+		.social-media{
+			display: flex;
+			justify-content: center !important;
+		}
+
+		.social-media1{
+			justify-content: center;
+		}
+
+        .row{
+            display: flex;
+            align-items: center;
+			margin-bottom: 10px !important;
+			margin-top: 20px;
+        }
+
+		.col-3{
+			min-width: 400px;
+			text-align: center !important;
+		}
+
+		@media only screen and (max-width:1219px){
+
+		.mode{
+			display: none;
+		}
+		}
+		
+		@media only screen and (max-width:819px){
+
+		.mode{
+			display: block;
+		}
+		}
+		
+		@media only screen and (max-width:799px){
+
+		.mode{
+			display: none;
+		}
+		}
+		
+		@media only screen and (max-width:440px){
+
+		.mode{
+			display: block;
+		}
+		}
+		
+		.social-iconfb{
+			height: 46px;
+			width: 46px;
+			border: none;
+			margin-right: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			background-color: #3b5998;;
+			font-size: 1.1rem;
+			border-radius: 50%;
+			transition: 0.5s;
+			color: #fff;
+		}
+		.social-icontw{
+			height: 46px;
+			width: 46px;
+			border: none;
+			margin-right: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			background-color: #1da1f2;
+			font-size: 1.1rem;
+			border-radius: 50%;
+			transition: 0.5s;
+			color: #fff;
+		}
+		.social-iconli{
+			height: 46px;
+			width: 46px;
+			border: none;
+			margin-right: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			background-color: #0077b5;
+			font-size: 1.1rem;
+			border-radius: 50%;
+			transition: 0.5s;
+			color: #fff;
+		}
+		.social-iconyt{
+			height: 46px;
+			width: 46px;
+			border: none;
+			margin-right: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			background-color: #ff0000;
+			font-size: 1.1rem;
+			border-radius: 50%;
+			transition: 0.5s;
+			color: #fff;
+		}
+
+		.social-iconfb:hover{
+			color: #3b5998;
+			background: #fff;
+		}
+		.social-icontw:hover{
+			color: #1da1f2;
+			background: #fff;
+		}
+		.social-iconli:hover{
+			color: #0077b5;
+			background: #fff;
+		}
+		.social-iconyt:hover{
+			color: #ff0000;
+			background: #fff;
+		}
+
+		#footer hr{
+			visibility: hidden;
+		}
+
+    </style>
+
+
+</head>
+<body>
+
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 40px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // Scroll To Top
+		function topFunction() {
+		    window.scrollTo({top: 0, behavior: 'smooth'});
+		}
+    </script>
+
+
+	<!-- Nav bar -->
+	<section id="navbar">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#" style="text-decoration: none; color: #fff;"><img src="Edocify logo.png" style="max-width: 200px;" class="img-fluid"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="#home"><b>HOME</b></a></li>
+                    <li><a href="#services"><b>SERVICES</b></a></li>
+                    <li><a href="#about-us"><b>ABOUT US</b></a></li>
+                    <li><a href="#our-trust"><b>OUR TRUST</b></a></li>
+                    <li><a href="#contact-us"><b>CONTACT US</b></a></li>
+
+                </ul>
+            </nav>
+            <i class="fas fa-bars" onclick="menutoggle()"></i>
+        </div>
+    </div>
+	</section>
+	<!-- Header Section -->
+	<section id="header">
+		<div class="container-fluid">
+			<div class="row">
+				<video class="container-fluid" style="max-width: 100%;" src="Home Screen.mp4" autoplay loop muted></video>
+			</div>
+		</div><br><br><br>
+	</section>
+
+	<!-- Services Section -->
+	<section id="services">
+		<div class="container text-center">
+            <h1 class="title"><b>WHAT WE DO</b></h1><br>
+			<div class="row text-center">
+				<div class="col-4 services">
+					<a href="presentation creating.html" style="text-decoration: none !important;"><img src="undraw_Business_plan_re_0v81.svg" class="img-fluid service-imgs gmi" /></a>
+                    <a href="presentation creating.html" style="text-decoration: none !important; color: #fff;"><h4><b>Presentation Creating</b></h4></a>
+                    <p>We stand to provide the best solution to your own ideas of a presentation rich in your designs and our amazing creativity, to make an stunning presentation which is unique to you.</p>
+				</div>
+				<div class="col-4 services">
+					<a href="graphic designing.html" style="text-decoration: none !important;"><img src="undraw_online_art_bgb4.svg" style="width: 240px;" class="img-fluid service-imgs gim" /></a>
+                    <a href="graphic designing.html" style="text-decoration: none !important; color: #fff;"><h4><b>Graphic Designing</b></h4></a>
+                    <p>We design the best and very amazing graphic designs which express your imaginations and well suited to you and the ongoing patterns in the society.</p>
+				</div>
+				<div class="col-4 services">
+					<a href="branding.html" style="text-decoration: none !important;"><img src="undraw_Logo_design_re_gfu6.svg" style="width: 240px;" class="img-fluid service-imgs gim" /></a>
+                    <a href="branding.html" style="text-decoration: none !important; color: #fff;"><h5 class="text-size2"><b>Branding</b></h5></a>
+                    <p>We rebrand website logos, design new website logos, design icon-packs which are very creative and which suit for your website's website or mobile or web application and etc.</p>
+				</div>
+				<div class="col-4 services">
+					<a href="ebook library.html" style="text-decoration: none !important;"><img src="undraw_book_lover_mkck.svg" style="width: 200px;" class="img-fluid service-imgs" /></a>
+                    <a href="ebook library.html" style="text-decoration: none !important; color: #fff;"><h5 class="title-size"><b>E - Book Library</b></h5></a>
+                    <p>We exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple exaple </p>
+				</div>
+			</div><br><br>
+			<div class="row">
+				<a href="Site/Services.html" style="text-align: center;" class="btn-primary text-center">All Services</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- About-Us Section -->
+	<section id="about-us">
+		<div class="container1 text-center">
+            <h1 class="title"><b>WHO ARE WE</b></h1><br><br><br><br>
+			<div class="row">
+				<div class="col-2">
+					<p style="font-size: 20px;"><span style="font-size: 380%;"><b>W</b></span>e are the team <b>Edocify.</b> This is the best website which you should choose to get the technological services like, <b>Professional Presentation Making, Amazing Graphic Designing, Branding, a E - Book Store, and many more.</b> Our mission is to render all those services to you fast, in an outstanding quality, whcih suits well for you and for modern society. This is a really great chance for you to save your valuable time that you spend on that works.</p>
+				</div>
+				<div class="col-2">
+					<img src="undraw_stand_out_1oag.svg" class="img-fluid" style="width: 500px; text-align: center; margin-left: 140px;">
+				</div>
+			</div>
+			<a href="Site/About Us.html" class="btn-primary text-center">More About Us</a><br><br><br>
+		</div>
+			<br><br><br><br><br>
+	</section>
+
+	<!-- Our-Trust Section -->
+	<section id="our-trust">
+		<h1 class="title text-center"><b>WHO TRUST US</b></h1><br><br><br><br><br><br><br>
+			<div class="row">
+				<div class="col-4 text-center">
+					<a target="_blank" href=""><img src="blue unicorn.png" class="img-fluid"></a>
+				</div>
+				<div class="col-4 text-center">
+					<a target="_blank" href=""><img src="googlelogo.png" class="img-fluid"></a>
+				</div>
+				<div class="col-4 text-center">
+					<a target="_blank" href=""><img src="microsoftlogo.png" class="img-fluid"></a>
+				</div>
+				<div class="col-4 text-center">
+					<a target="_blank" href="https://www.youtube.com/channel/UCGgI7WrZFbhMM7aERWQcs1Q"><img src="themodelogo-max.png" class="img-fluid"></a>
+				</div>
+			</div>
+	</section><br><br><br><br><br><br><br>
+
+	<!-- Contact-Us Section -->
+	<section id="contact-us">
+		<h1 class="title"><b>CONTACT US</b></h1>
+		<div class="row">
+			<div class="col-2">
+				<div class="contact-form">
+					<form id="contact-form" method="POST" action="mail.php">
+						<input name="name" type="text" class="form-control" placeholder="Name" required style="font-family:'Poppins', sans-serif; color: #fff !important; font-weight: 900; text-decoration: #fff;"><br><br>
+						<input name="email" type="email" class="form-control" placeholder="Email" required style="font-family:'Poppins', sans-serif; color: #fff !important; font-weight: 900;"><br><br>
+						<input name="phone" type="text" class="form-control" placeholder="Phone" required style="font-family:'Poppins', sans-serif; color: #fff !important; font-weight: 900;"><br><br>
+						<textarea name="message" class="form-control" placeholder="Message" cols="30" rows="5" required style="font-family:'Poppins', sans-serif; color: #fff !important; font-weight: 900;"></textarea><br><br><br>
+						<input type="submit" class="btn-primary submit" style="text-decoration: none !important; cursor: pointer; font-size: larger;" value="Submit Now">
+					</form>
+				</div>
+			</div>
+			<div class="col-2">
+				<h2>Let's Connect...</h2>
+				<img src="undraw_calling_kpbp.svg" class="img-fluid">
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer Section -->
+	<section id="footer">
+		<div class="row text-center">
+			<div class="col-3 text-center" class="container">
+				<a href="#" style="text-decoration: none !important;"><img src="Edocify logo.png" style="max-width: 420px;" class="img-fluid text"></a><br>
+				<p class="container">Save Your Valuable Time That You Spend For Works<br>Like Making Presentations, Designing Amazing Graphics,<br>Creating Cool Logos, YouTube Intros and More<br>Things By Giving Those Works For The<br>Best Website in Graphic Designing, Logo Designing,<br>Presentation Building and More.</p><br><br>
+			</div>
+			<div class="col-3 social-media1 text-center" style="margin-left: 0px !important;">
+				<a href="mailto:support@edocify.com" style="text-decoration: none !important; color: #fff; text-align: center;"><i class="far fa-envelope"  style="margin-right: 8px; font-size: 30px; text-align: center; padding-top: 7px; border-radius: 4px;"></i> <b style="font-size: 17px;" class="hcolor">support@edocify.com</b></a><br><br>
+				<p style="text-align: center;"><i class="fas fa-phone-alt"  style="margin-right: 8px; font-size: 30px; text-align: center; padding-top: 7px; border-radius: 4px;"></i> <b class="hcolor">(+94) 123456789</b></p>
+				<br><br>
+				
+			<div class="social-media text-center">
+				<a href="#" target="_blank" class="social-iconfb"><i class="fab fa-facebook-f"></i></a>
+                        
+				<a href="#" target="_blank" class="social-icontw"><i class="fab fa-twitter"></i></a>
+
+				<a href="#" target="_blank" class="social-iconli"><i class="fab fa-linkedin-in"></i></a>
+				
+				<a href="https://www.youtube.com/channel/UCGgI7WrZFbhMM7aERWQcs1Q" target="_blank" class="social-iconyt"><i class="fab fa-youtube"></i></a>
+
+				<a href="#" target="_blank" class="social-icongt"><i style="font-size: 46px; color: #fff;" class="fab fa-github"></i></a>
+
+			</div><br><br>
+			</div>
+			<div class="col-3 text-center mode container-fluid" style="margin: 0;">
+				<video src="footer video.mp4" style="max-width: 400px; text-align: center;" class="container-fluid" autoplay loop muted></video><br><br>
+			</div><hr style="color: #000;">
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<p style="text-align: center;"><b>Copyright <i class="far fa-copyright"></i>2021 All Rights Reserved | Edocify<br><a style="text-decoration: none; color: #1da1f2;" href="Privacy-policy.html">Privacy Policy</a></b></p>
+			</div>
+			<div class="col-2">
+				<p style="text-align: center;">A Solution By <a href="#" style="text-decoration: none !important; color: #fff;"><b class="hcolor">The Mode</b></a></p>
+			</div>
+		</div>
+	</section>
+
+
+    <!-- js for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(menuItems.style.maxHeight == "0px")
+                {
+                    menuItems.style.maxHeight = "400px";
+                }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+	<!-- SmoothScroll v16.1.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll -->
+	<script>
+	(function (global, factory) {
+		typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+		typeof define === 'function' && define.amd ? define(factory) :
+		(global = global || self, global.SmoothScroll = factory());
+	}(this, (function () { 'use strict';
+
+		//
+		// Default settings
+		//
+
+		var defaults = {
+
+			// Selectors
+			ignore: '[data-scroll-ignore]',
+			header: null,
+			topOnEmptyHash: true,
+
+			// Speed & Duration
+			speed: 500,
+			speedAsDuration: false,
+			durationMax: null,
+			durationMin: null,
+			clip: true,
+			offset: 50,
+
+			// Easing
+			easing: 'easeInOutCubic',
+			customEasing: null,
+
+			// History
+			updateURL: true,
+			popstate: true,
+
+			// Custom Events
+			emitEvents: true
+
+		};
+
+
+		//
+		// Utility Methods
+		//
+
+		/**
+		 * Check if browser supports required methods
+		 * @return {Boolean} Returns true if all required methods are supported
+		 */
+		var supports = function () {
+			return (
+				'querySelector' in document &&
+				'addEventListener' in window &&
+				'requestAnimationFrame' in window &&
+				'closest' in window.Element.prototype
+			);
+		};
+
+		/**
+		 * Merge two or more objects together.
+		 * @param   {Object}   objects  The objects to merge together
+		 * @returns {Object}            Merged values of defaults and options
+		 */
+		var extend = function () {
+			var merged = {};
+			Array.prototype.forEach.call(arguments, function (obj) {
+				for (var key in obj) {
+					if (!obj.hasOwnProperty(key)) return;
+					merged[key] = obj[key];
+				}
+			});
+			return merged;
+		};
+
+		/**
+		 * Check to see if user prefers reduced motion
+		 * @param  {Object} settings Script settings
+		 */
+		var reduceMotion = function () {
+			if ('matchMedia' in window && window.matchMedia('(prefers-reduced-motion)').matches) {
+				return true;
+			}
+			return false;
+		};
+
+		/**
+		 * Get the height of an element.
+		 * @param  {Node} elem The element to get the height of
+		 * @return {Number}    The element's height in pixels
+		 */
+		var getHeight = function (elem) {
+			return parseInt(window.getComputedStyle(elem).height, 10);
+		};
+
+		/**
+		 * Escape special characters for use with querySelector
+		 * @author Mathias Bynens
+		 * @link https://github.com/mathiasbynens/CSS.escape
+		 * @param {String} id The anchor ID to escape
+		 */
+		var escapeCharacters = function (id) {
+
+			// Remove leading hash
+			if (id.charAt(0) === '#') {
+				id = id.substr(1);
+			}
+
+			var string = String(id);
+			var length = string.length;
+			var index = -1;
+			var codeUnit;
+			var result = '';
+			var firstCodeUnit = string.charCodeAt(0);
+			while (++index < length) {
+				codeUnit = string.charCodeAt(index);
+				// Note: there’s no need to special-case astral symbols, surrogate
+				// pairs, or lone surrogates.
+
+				// If the character is NULL (U+0000), then throw an
+				// `InvalidCharacterError` exception and terminate these steps.
+				if (codeUnit === 0x0000) {
+					throw new InvalidCharacterError(
+						'Invalid character: the input contains U+0000.'
+					);
+				}
+
+				if (
+					// If the character is in the range [\1-\1F] (U+0001 to U+001F) or is
+					// U+007F, […]
+					(codeUnit >= 0x0001 && codeUnit <= 0x001F) || codeUnit == 0x007F ||
+					// If the character is the first character and is in the range [0-9]
+					// (U+0030 to U+0039), […]
+					(index === 0 && codeUnit >= 0x0030 && codeUnit <= 0x0039) ||
+					// If the character is the second character and is in the range [0-9]
+					// (U+0030 to U+0039) and the first character is a `-` (U+002D), […]
+					(
+						index === 1 &&
+						codeUnit >= 0x0030 && codeUnit <= 0x0039 &&
+						firstCodeUnit === 0x002D
+					)
+				) {
+					// http://dev.w3.org/csswg/cssom/#escape-a-character-as-code-point
+					result += '\\' + codeUnit.toString(16) + ' ';
+					continue;
+				}
+
+				// If the character is not handled by one of the above rules and is
+				// greater than or equal to U+0080, is `-` (U+002D) or `_` (U+005F), or
+				// is in one of the ranges [0-9] (U+0030 to U+0039), [A-Z] (U+0041 to
+				// U+005A), or [a-z] (U+0061 to U+007A), […]
+				if (
+					codeUnit >= 0x0080 ||
+					codeUnit === 0x002D ||
+					codeUnit === 0x005F ||
+					codeUnit >= 0x0030 && codeUnit <= 0x0039 ||
+					codeUnit >= 0x0041 && codeUnit <= 0x005A ||
+					codeUnit >= 0x0061 && codeUnit <= 0x007A
+				) {
+					// the character itself
+					result += string.charAt(index);
+					continue;
+				}
+
+				// Otherwise, the escaped character.
+				// http://dev.w3.org/csswg/cssom/#escape-a-character
+				result += '\\' + string.charAt(index);
+
+			}
+
+			// Return sanitized hash
+			return '#' + result;
+
+		};
+
+		/**
+		 * Calculate the easing pattern
+		 * @link https://gist.github.com/gre/1650294
+		 * @param   {Object} settings Easing pattern
+		 * @param   {Number} time     Time animation should take to complete
+		 * @returns {Number}
+		 */
+		var easingPattern = function (settings, time) {
+			var pattern;
+
+			// Default Easing Patterns
+			if (settings.easing === 'easeInQuad') pattern = time * time; // accelerating from zero velocity
+			if (settings.easing === 'easeOutQuad') pattern = time * (2 - time); // decelerating to zero velocity
+			if (settings.easing === 'easeInOutQuad') pattern = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time; // acceleration until halfway, then deceleration
+			if (settings.easing === 'easeInCubic') pattern = time * time * time; // accelerating from zero velocity
+			if (settings.easing === 'easeOutCubic') pattern = (--time) * time * time + 1; // decelerating to zero velocity
+			if (settings.easing === 'easeInOutCubic') pattern = time < 0.5 ? 4 * time * time * time : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1; // acceleration until halfway, then deceleration
+			if (settings.easing === 'easeInQuart') pattern = time * time * time * time; // accelerating from zero velocity
+			if (settings.easing === 'easeOutQuart') pattern = 1 - (--time) * time * time * time; // decelerating to zero velocity
+			if (settings.easing === 'easeInOutQuart') pattern = time < 0.5 ? 8 * time * time * time * time : 1 - 8 * (--time) * time * time * time; // acceleration until halfway, then deceleration
+			if (settings.easing === 'easeInQuint') pattern = time * time * time * time * time; // accelerating from zero velocity
+			if (settings.easing === 'easeOutQuint') pattern = 1 + (--time) * time * time * time * time; // decelerating to zero velocity
+			if (settings.easing === 'easeInOutQuint') pattern = time < 0.5 ? 16 * time * time * time * time * time : 1 + 16 * (--time) * time * time * time * time; // acceleration until halfway, then deceleration
+
+			// Custom Easing Patterns
+			if (!!settings.customEasing) pattern = settings.customEasing(time);
+
+			return pattern || time; // no easing, no acceleration
+		};
+
+		/**
+		 * Determine the document's height
+		 * @returns {Number}
+		 */
+		var getDocumentHeight = function () {
+			return Math.max(
+				document.body.scrollHeight, document.documentElement.scrollHeight,
+				document.body.offsetHeight, document.documentElement.offsetHeight,
+				document.body.clientHeight, document.documentElement.clientHeight
+			);
+		};
+
+		/**
+		 * Calculate how far to scroll
+		 * Clip support added by robjtede - https://github.com/cferdinandi/smooth-scroll/issues/405
+		 * @param {Element} anchor       The anchor element to scroll to
+		 * @param {Number}  headerHeight Height of a fixed header, if any
+		 * @param {Number}  offset       Number of pixels by which to offset scroll
+		 * @param {Boolean} clip         If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
+		 * @returns {Number}
+		 */
+		var getEndLocation = function (anchor, headerHeight, offset, clip) {
+			var location = 0;
+			if (anchor.offsetParent) {
+				do {
+					location += anchor.offsetTop;
+					anchor = anchor.offsetParent;
+				} while (anchor);
+			}
+			location = Math.max(location - headerHeight - offset, 0);
+			if (clip) {
+				location = Math.min(location, getDocumentHeight() - window.innerHeight);
+			}
+				return location;
+		};
+
+		/**
+		 * Get the height of the fixed header
+		 * @param  {Node}   header The header
+		 * @return {Number}        The height of the header
+		 */
+		var getHeaderHeight = function (header) {
+			return !header ? 0 : (getHeight(header) + header.offsetTop);
+		};
+
+		/**
+		 * Calculate the speed to use for the animation
+		 * @param  {Number} distance The distance to travel
+		 * @param  {Object} settings The plugin settings
+		 * @return {Number}          How fast to animate
+		 */
+		var getSpeed = function (distance, settings) {
+			var speed = settings.speedAsDuration ? settings.speed : Math.abs(distance / 1000 * settings.speed);
+			if (settings.durationMax && speed > settings.durationMax) return settings.durationMax;
+			if (settings.durationMin && speed < settings.durationMin) return settings.durationMin;
+			return parseInt(speed, 10);
+		};
+
+		var setHistory = function (options) {
+
+			// Make sure this should run
+			if (!history.replaceState || !options.updateURL || history.state) return;
+
+			// Get the hash to use
+			var hash = window.location.hash;
+			hash = hash ? hash : '';
+
+			// Set a default history
+			history.replaceState(
+				{
+					smoothScroll: JSON.stringify(options),
+					anchor: hash ? hash : window.pageYOffset
+				},
+				document.title,
+				hash ? hash : window.location.href
+			);
+
+		};
+
+		/**
+		 * Update the URL
+		 * @param  {Node}    anchor  The anchor that was scrolled to
+		 * @param  {Boolean} isNum   If true, anchor is a number
+		 * @param  {Object}  options Settings for Smooth Scroll
+		 */
+		var updateURL = function (anchor, isNum, options) {
+
+			// Bail if the anchor is a number
+			if (isNum) return;
+
+			// Verify that pushState is supported and the updateURL option is enabled
+			if (!history.pushState || !options.updateURL) return;
+
+			// Update URL
+			history.pushState(
+				{
+					smoothScroll: JSON.stringify(options),
+					anchor: anchor.id
+				},
+				document.title,
+				anchor === document.documentElement ? '#top' : '#' + anchor.id
+			);
+
+		};
+
+		/**
+		 * Bring the anchored element into focus
+		 * @param {Node}     anchor      The anchor element
+		 * @param {Number}   endLocation The end location to scroll to
+		 * @param {Boolean}  isNum       If true, scroll is to a position rather than an element
+		 */
+		var adjustFocus = function (anchor, endLocation, isNum) {
+
+			// Is scrolling to top of page, blur
+			if (anchor === 0) {
+				document.body.focus();
+			}
+
+			// Don't run if scrolling to a number on the page
+			if (isNum) return;
+
+			// Otherwise, bring anchor element into focus
+			anchor.focus();
+			if (document.activeElement !== anchor) {
+				anchor.setAttribute('tabindex', '-1');
+				anchor.focus();
+				anchor.style.outline = 'none';
+			}
+			window.scrollTo(0 , endLocation);
+
+		};
+
+		/**
+		 * Emit a custom event
+		 * @param  {String} type    The event type
+		 * @param  {Object} options The settings object
+		 * @param  {Node}   anchor  The anchor element
+		 * @param  {Node}   toggle  The toggle element
+		 */
+		var emitEvent = function (type, options, anchor, toggle) {
+			if (!options.emitEvents || typeof window.CustomEvent !== 'function') return;
+			var event = new CustomEvent(type, {
+				bubbles: true,
+				detail: {
+					anchor: anchor,
+					toggle: toggle
+				}
+			});
+			document.dispatchEvent(event);
+		};
+
+
+		//
+		// SmoothScroll Constructor
+		//
+
+		var SmoothScroll = function (selector, options) {
+
+			//
+			// Variables
+			//
+
+			var smoothScroll = {}; // Object for public APIs
+			var settings, toggle, fixedHeader, animationInterval;
+
+
+			//
+			// Methods
+			//
+
+			/**
+			 * Cancel a scroll-in-progress
+			 */
+			smoothScroll.cancelScroll = function (noEvent) {
+				cancelAnimationFrame(animationInterval);
+				animationInterval = null;
+				if (noEvent) return;
+				emitEvent('scrollCancel', settings);
+			};
+
+			/**
+			 * Start/stop the scrolling animation
+			 * @param {Node|Number} anchor  The element or position to scroll to
+			 * @param {Element}     toggle  The element that toggled the scroll event
+			 * @param {Object}      options
+			 */
+			smoothScroll.animateScroll = function (anchor, toggle, options) {
+
+				// Cancel any in progress scrolls
+				smoothScroll.cancelScroll();
+
+				// Local settings
+				var _settings = extend(settings || defaults, options || {}); // Merge user options with defaults
+
+				// Selectors and variables
+				var isNum = Object.prototype.toString.call(anchor) === '[object Number]' ? true : false;
+				var anchorElem = isNum || !anchor.tagName ? null : anchor;
+				if (!isNum && !anchorElem) return;
+				var startLocation = window.pageYOffset; // Current location on the page
+				if (_settings.header && !fixedHeader) {
+					// Get the fixed header if not already set
+					fixedHeader = document.querySelector(_settings.header);
+				}
+				var headerHeight = getHeaderHeight(fixedHeader);
+				var endLocation = isNum ? anchor : getEndLocation(anchorElem, headerHeight, parseInt((typeof _settings.offset === 'function' ? _settings.offset(anchor, toggle) : _settings.offset), 10), _settings.clip); // Location to scroll to
+				var distance = endLocation - startLocation; // distance to travel
+				var documentHeight = getDocumentHeight();
+				var timeLapsed = 0;
+				var speed = getSpeed(distance, _settings);
+				var start, percentage, position;
+
+				/**
+				 * Stop the scroll animation when it reaches its target (or the bottom/top of page)
+				 * @param {Number} position Current position on the page
+				 * @param {Number} endLocation Scroll to location
+				 * @param {Number} animationInterval How much to scroll on this loop
+				 */
+				var stopAnimateScroll = function (position, endLocation) {
+
+					// Get the current location
+					var currentLocation = window.pageYOffset;
+
+					// Check if the end location has been reached yet (or we've hit the end of the document)
+					if (position == endLocation || currentLocation == endLocation || ((startLocation < endLocation && window.innerHeight + currentLocation) >= documentHeight)) {
+
+						// Clear the animation timer
+						smoothScroll.cancelScroll(true);
+
+						// Bring the anchored element into focus
+						adjustFocus(anchor, endLocation, isNum);
+
+						// Emit a custom event
+						emitEvent('scrollStop', _settings, anchor, toggle);
+
+						// Reset start
+						start = null;
+						animationInterval = null;
+
+						return true;
+
+					}
+				};
+
+				/**
+				 * Loop scrolling animation
+				 */
+				var loopAnimateScroll = function (timestamp) {
+					if (!start) { start = timestamp; }
+					timeLapsed += timestamp - start;
+					percentage = speed === 0 ? 0 : (timeLapsed / speed);
+					percentage = (percentage > 1) ? 1 : percentage;
+					position = startLocation + (distance * easingPattern(_settings, percentage));
+					window.scrollTo(0, Math.floor(position));
+					if (!stopAnimateScroll(position, endLocation)) {
+						animationInterval = window.requestAnimationFrame(loopAnimateScroll);
+						start = timestamp;
+					}
+				};
+
+				/**
+				 * Reset position to fix weird iOS bug
+				 * @link https://github.com/cferdinandi/smooth-scroll/issues/45
+				 */
+				if (window.pageYOffset === 0) {
+					window.scrollTo(0, 0);
+				}
+
+				// Update the URL
+				updateURL(anchor, isNum, _settings);
+
+				// If the user prefers reduced motion, jump to location
+				if (reduceMotion()) {
+					adjustFocus(anchor, Math.floor(endLocation), false);
+					return;
+				}
+
+				// Emit a custom event
+				emitEvent('scrollStart', _settings, anchor, toggle);
+
+				// Start scrolling animation
+				smoothScroll.cancelScroll(true);
+				window.requestAnimationFrame(loopAnimateScroll);
+
+			};
+
+			/**
+			 * If smooth scroll element clicked, animate scroll
+			 */
+			var clickHandler = function (event) {
+
+				// Don't run if event was canceled but still bubbled up
+				// By @mgreter - https://github.com/cferdinandi/smooth-scroll/pull/462/
+				if (event.defaultPrevented) return;
+
+				// Don't run if right-click or command/control + click or shift + click
+				if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) return;
+
+				// Check if event.target has closest() method
+				// By @totegi - https://github.com/cferdinandi/smooth-scroll/pull/401/
+				if (!('closest' in event.target)) return;
+
+				// Check if a smooth scroll link was clicked
+				toggle = event.target.closest(selector);
+				if (!toggle || toggle.tagName.toLowerCase() !== 'a' || event.target.closest(settings.ignore)) return;
+
+				// Only run if link is an anchor and points to the current page
+				if (toggle.hostname !== window.location.hostname || toggle.pathname !== window.location.pathname || !/#/.test(toggle.href)) return;
+
+				// Get an escaped version of the hash
+				var hash;
+				try {
+					hash = escapeCharacters(decodeURIComponent(toggle.hash));
+				} catch(e) {
+					hash = escapeCharacters(toggle.hash);
+				}
+
+				// Get the anchored element
+				var anchor;
+				if (hash === '#') {
+					if (!settings.topOnEmptyHash) return;
+					anchor = document.documentElement;
+				} else {
+					anchor = document.querySelector(hash);
+				}
+				anchor = !anchor && hash === '#top' ? document.documentElement : anchor;
+
+				// If anchored element exists, scroll to it
+				if (!anchor) return;
+				event.preventDefault();
+				setHistory(settings);
+				smoothScroll.animateScroll(anchor, toggle);
+
+			};
+
+			/**
+			 * Animate scroll on popstate events
+			 */
+			var popstateHandler = function () {
+
+				// Stop if history.state doesn't exist (ex. if clicking on a broken anchor link).
+				// fixes `Cannot read property 'smoothScroll' of null` error getting thrown.
+				if (history.state === null) return;
+
+				// Only run if state is a popstate record for this instantiation
+				if (!history.state.smoothScroll || history.state.smoothScroll !== JSON.stringify(settings)) return;
+
+				// Get the anchor
+				var anchor = history.state.anchor;
+				if (typeof anchor === 'string' && anchor) {
+					anchor = document.querySelector(escapeCharacters(history.state.anchor));
+					if (!anchor) return;
+				}
+
+				// Animate scroll to anchor link
+				smoothScroll.animateScroll(anchor, null, {updateURL: false});
+
+			};
+
+			/**
+			 * Destroy the current initialization.
+			 */
+			smoothScroll.destroy = function () {
+
+				// If plugin isn't already initialized, stop
+				if (!settings) return;
+
+				// Remove event listeners
+				document.removeEventListener('click', clickHandler, false);
+				window.removeEventListener('popstate', popstateHandler, false);
+
+				// Cancel any scrolls-in-progress
+				smoothScroll.cancelScroll();
+
+				// Reset variables
+				settings = null;
+				toggle = null;
+				fixedHeader = null;
+				animationInterval = null;
+
+			};
+
+			/**
+			 * Initialize Smooth Scroll
+			 * @param {Object} options User settings
+			 */
+			var init = function () {
+
+				// feature test
+				if (!supports()) throw 'Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.';
+
+				// Destroy any existing initializations
+				smoothScroll.destroy();
+
+				// Selectors and variables
+				settings = extend(defaults, options || {}); // Merge user options with defaults
+				fixedHeader = settings.header ? document.querySelector(settings.header) : null; // Get the fixed header
+
+				// When a toggle is clicked, run the click handler
+				document.addEventListener('click', clickHandler, false);
+
+				// If updateURL and popState are enabled, listen for pop events
+				if (settings.updateURL && settings.popstate) {
+					window.addEventListener('popstate', popstateHandler, false);
+				}
+
+			};
+
+
+			//
+			// Initialize plugin
+			//
+
+			init();
+
+
+			//
+			// Public APIs
+			//
+
+			return smoothScroll;
+
+		};
+
+		return SmoothScroll;
+
+	})));
+	</script>
+
+    <!-- smooth scroll -->
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+</body>
+</html>
